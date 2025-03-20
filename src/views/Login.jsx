@@ -45,21 +45,21 @@ const Login = () => {
                 {alert.msg &&
                     <Alert alert={alert} />
                 }
-                <form action="">
+                <form data-cy="loginForm" action="">
                     <div className="my-5">
                         <label className=" text-gray-500 block text-xl font-bold">
                             Email
                         </label>
-                        <input type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Register Email" className="border w-full p-3 mt-3 bg-gray-50 rounded-xl" />
+                        <input data-cy="email" type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Register Email" className="border w-full p-3 mt-3 bg-gray-50 rounded-xl" />
                     </div>
                     <div className="my-5">
                         <label className=" text-gray-500 block text-xl font-bold">
                             Password
                         </label>
-                        <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" className="border w-full p-3 mt-3 bg-gray-50 rounded-xl" />
+                        <input data-cy="password" type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" className="border w-full p-3 mt-3 bg-gray-50 rounded-xl" />
                     </div>
 
-                    <Button onClick={handleSubmit} label="Login" />
+                    <Button type="submit" onClick={handleSubmit} label="Login" />
 
                 </form>
                 <nav className='mt-5 lg:flex lg:justify-between'>
